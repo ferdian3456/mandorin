@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "belajar-react",
-    "slug": "belajar-react",
+    "name": "mandorin",
+    "slug": "mandorin",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -18,7 +18,7 @@
       },
       "predictiveBackGestureEnabled": false
     },
-    "scheme": "belajar-react",
+    "scheme": "mandorin",
     "experiments": {
       "typedRoutes": true
     },
