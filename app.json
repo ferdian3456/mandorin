@@ -18,8 +18,15 @@
       },
       "predictiveBackGestureEnabled": false
     },
+    "scheme": "belajar-react",
+    "experiments": {
+      "typedRoutes": true
+    },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
