@@ -16,7 +16,7 @@ export default function Page() {
       <Text>Nomor HP</Text>
       <TextInput
         className="border p-2"
-        placeholder="0812-3456-7890"
+        placeholder="081234567890"
         keyboardType="phone-pad"
         value={phone}
         onChangeText={setPhone}
