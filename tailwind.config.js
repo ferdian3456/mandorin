@@ -8,12 +8,13 @@ module.exports = {
       colors: {
         'primary': '#E4572E',
         'primary-dark': '#C4431F',
+        'primary-soft': '#FDEBE4',
         'foreground': '#1C1917',
         'muted': '#78716C',
         'subtle': '#A8A29E',
         'on-dark': '#D6D3D1',
         'outline': '#E7E5E4',
-        'field': '#F5F5F4'
+        'field': '#F5F5F4',
       },
       fontFamily: {
         jakarta: ['PlusJakartaSans_400Regular'],

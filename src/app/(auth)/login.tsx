@@ -5,6 +5,7 @@ import { HardHat, Smartphone, Lock, EyeOff, ArrowRight } from '@/components/icon
 import { LinearGradient } from 'expo-linear-gradient';
 import type { LucideIcon } from 'lucide-react-native';
 import { ReactNode, useState } from 'react';
+import { Link } from 'expo-router'
 
 type InputFieldProps = TextInputProps & {
     label: string
@@ -33,7 +34,7 @@ function InputField({ label, icon: Icon, right, ...props }: InputFieldProps) {
     )
 }
 
-export default function Page() {
+export default function LoginScreen() {
     const [show, setShow] = useState(false)
 
     return (
@@ -104,7 +105,9 @@ export default function Page() {
 
                 <View className='flex justify-center mt-6 flex-row gap-x-1'>
                     <Text className='text-muted font-jakarta text-sm'>Belum punya akun?</Text>
-                    <Text className='text-primary font-jakarta-bold text-sm'>Daftar sekarang</Text>
+                    <Link href="/register">
+                        <Text className='text-primary font-jakarta-bold text-sm'>Daftar sekarang</Text>
+                    </Link>
                 </View>
 
             </View>

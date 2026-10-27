@@ -1,5 +1,5 @@
 // biar bisa styling icon lucide pake nativewind
-import { ArrowRight, Check, EyeOff, HardHat, Lock, Smartphone } from 'lucide-react-native';
+import { ArrowRight,User, Phone,Building2, CircleCheck, CircleDot, ArrowLeft, Check, EyeOff, HardHat, Lock, Smartphone } from 'lucide-react-native';
 import type { LucideIcon } from 'lucide-react-native';
 import { cssInterop } from 'nativewind';
 
@@ -11,6 +11,6 @@ const withClassName = (icon: LucideIcon) =>
         },
     });
 
-[ArrowRight, Check, EyeOff, HardHat, Lock, Smartphone].forEach(withClassName);
+[ArrowRight, User, Phone,Building2, CircleCheck, CircleDot,ArrowLeft, Check, EyeOff, HardHat, Lock, Smartphone].forEach(withClassName);
 
-export { ArrowRight, Check, EyeOff, HardHat, Lock, Smartphone };
+export { ArrowRight, User, Phone, Building2, CircleCheck, CircleDot,ArrowLeft, Check, EyeOff, HardHat, Lock, Smartphone };
