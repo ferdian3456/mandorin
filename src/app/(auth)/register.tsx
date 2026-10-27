@@ -128,12 +128,12 @@ export default function RegisterScreen() {
                 </View>
 
                 {/* daftar sekarang */}
-                <View className='w-full mt-7 bg-primary h-[3.5rem] rounded-2xl flex flex-row justify-center items-center gap-x-2 active:bg-primary-dark'>
+                <View className='w-full mt-10 bg-primary h-[3.5rem] rounded-2xl flex flex-row justify-center items-center gap-x-2 active:bg-primary-dark'>
                     <Text className='text-white font-jakarta-bold text-lg'>Daftar Sekarang</Text>
                     <ArrowRight className='size-[1.125rem] text-white'></ArrowRight>
                 </View>
 
-                <View className='flex justify-center mt-8 flex-row gap-x-1'>
+                <View className='flex justify-center mt-7 flex-row gap-x-1'>
                     <Text className='text-muted font-jakarta text-sm'>Sudah punya akun?</Text>
                     <Link href="/login">
                         <Text className='text-primary font-jakarta-bold text-sm'>Masuk</Text>
