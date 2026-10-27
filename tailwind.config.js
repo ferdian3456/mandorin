@@ -14,7 +14,7 @@ module.exports = {
         'subtle': '#A8A29E',
         'on-dark': '#D6D3D1',
         'outline': '#E7E5E4',
-        'field': '#F5F5F4',
+        'field': '#F5F5F4'
       },
       fontFamily: {
         jakarta: ['PlusJakartaSans_400Regular'],

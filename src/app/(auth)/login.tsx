@@ -5,7 +5,7 @@ import { HardHat, Smartphone, Lock, EyeOff, ArrowRight } from '@/components/icon
 import { LinearGradient } from 'expo-linear-gradient';
 import type { LucideIcon } from 'lucide-react-native';
 import { ReactNode, useState } from 'react';
-import { Link } from 'expo-router'
+import { Link, router } from 'expo-router'
 
 type InputFieldProps = TextInputProps & {
     label: string
@@ -98,10 +98,10 @@ export default function LoginScreen() {
                 </View>
 
                 {/* masuk */}
-                <View className='w-full mt-4 bg-primary h-[3.5rem] rounded-2xl flex flex-row justify-center items-center gap-x-2 active:bg-primary-dark'>
+                <Pressable onPress={() => router.replace('/')} className='w-full mt-4 bg-primary h-[3.5rem] rounded-2xl flex flex-row justify-center items-center gap-x-2 active:bg-primary-dark'>
                     <Text className='text-white font-jakarta-bold text-lg'>Masuk</Text>
                     <ArrowRight className='size-[1.125rem] text-white'></ArrowRight>
-                </View>
+                </Pressable>
 
                 <View className='flex justify-center mt-6 flex-row gap-x-1'>
                     <Text className='text-muted font-jakarta text-sm'>Belum punya akun?</Text>

@@ -116,7 +116,7 @@ export default function RegisterScreen() {
                     />
                 </View>
 
-                <View className="mt-8 flex flex-row items-start gap-x-[10px]">
+                <View className="mt-8 flex flex-row gap-x-[10px] items-center">
                     <View className="size-[18px] bg-primary rounded-md flex justify-center items-center">
                         <Check className="size-3 text-white" />
                     </View>
