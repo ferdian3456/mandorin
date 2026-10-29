@@ -14,6 +14,12 @@ import {
     Smartphone,
     Bell,
     ShieldCheck,
+    Receipt,
+    Plus,
+    History,
+    ChevronRight,
+    Images,
+    FileCheck,
 } from 'lucide-react-native';
 import type { LucideIcon } from 'lucide-react-native';
 import { cssInterop } from 'nativewind';
@@ -41,6 +47,12 @@ const withClassName = (icon: LucideIcon) =>
     HardHat,
     Lock,
     Smartphone,
+    Receipt,
+    Plus,
+    History,
+    ChevronRight,
+    Images,
+    FileCheck,
 ].forEach(withClassName);
 
 export {
@@ -58,4 +70,10 @@ export {
     HardHat,
     Lock,
     Smartphone,
+    Receipt,
+    Plus,
+    History,
+    ChevronRight,
+    Images,
+    FileCheck,
 };
