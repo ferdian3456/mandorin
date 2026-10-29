@@ -1,9 +1,9 @@
-import { View, Text} from 'react-native';
+import { View, Text } from 'react-native';
 
-export default function MessageScreen(){
+export default function MessageScreen() {
     return (
         <View>
             <Text>Test</Text>
         </View>
-    )
+    );
 }

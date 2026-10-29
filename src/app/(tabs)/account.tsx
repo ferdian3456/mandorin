@@ -1,9 +1,9 @@
-import { View, Text} from 'react-native';
+import { View, Text } from 'react-native';
 
-export default function AccountScreen(){
+export default function AccountScreen() {
     return (
         <View>
             <Text>Test</Text>
         </View>
-    )
+    );
 }

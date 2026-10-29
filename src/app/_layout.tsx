@@ -1,10 +1,16 @@
 import { Stack } from 'expo-router';
-import "../../global.css";
+import '../../global.css';
 import { cssInterop } from 'nativewind';
 import { Image } from 'expo-image';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useEffect } from 'react';
-import { useFonts, PlusJakartaSans_400Regular, PlusJakartaSans_500Medium, PlusJakartaSans_600SemiBold, PlusJakartaSans_700Bold } from '@expo-google-fonts/plus-jakarta-sans';
+import {
+    useFonts,
+    PlusJakartaSans_400Regular,
+    PlusJakartaSans_500Medium,
+    PlusJakartaSans_600SemiBold,
+    PlusJakartaSans_700Bold,
+} from '@expo-google-fonts/plus-jakarta-sans';
 import * as SplashScreen from 'expo-splash-screen';
 
 // biar bisa styling expo image pake nativewind
@@ -19,12 +25,12 @@ export default function RootLayout() {
         PlusJakartaSans_400Regular,
         PlusJakartaSans_500Medium,
         PlusJakartaSans_600SemiBold,
-        PlusJakartaSans_700Bold
+        PlusJakartaSans_700Bold,
     });
 
     useEffect(() => {
-    if (loaded || error) {
-        // kalau sudah diload maka baru dihide splash screenya
+        if (loaded || error) {
+            // kalau sudah diload maka baru dihide splash screenya
             SplashScreen.hideAsync();
         }
     }, [loaded, error]);
@@ -33,5 +39,12 @@ export default function RootLayout() {
         return null;
     }
 
-    return <Stack screenOptions={{headerShown:false, contentStyle:{ backgroundColor: '#FFFFFF'}}}  />;
+    return (
+        <Stack
+            screenOptions={{
+                headerShown: false,
+                contentStyle: { backgroundColor: '#FFFFFF' },
+            }}
+        />
+    );
 }
