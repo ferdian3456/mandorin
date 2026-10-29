@@ -23,6 +23,8 @@ type InputFieldProps = TextInputProps & {
     right?: ReactNode;
 };
 
+type Role = 'owner' | 'mandor';
+
 // ketika "focus:" nanti warna border dan text berubah. gk bisa pake class focus: bawaan nativewind
 function InputField({ label, icon: Icon, right, ...props }: InputFieldProps) {
     const [focused, setFocused] = useState(false);
@@ -50,17 +52,57 @@ function InputField({ label, icon: Icon, right, ...props }: InputFieldProps) {
     );
 }
 
+// untuk switch card ketika aktif
+function RoleCard({
+    selected,
+    onPress,
+    icon: Icon,
+    title,
+    desc,
+}: {
+    selected: boolean;
+    onPress: () => void;
+    icon: LucideIcon;
+    title: string;
+    desc: string;
+}) {
+    return (
+        <Pressable
+            onPress={onPress}
+            className={`flex flex-1 gap-y-3 rounded-3xl border-2 px-4 py-4 ${
+                selected
+                    ? 'border-primary bg-primary-soft'
+                    : 'border-outline bg-white'
+            }`}
+        >
+            <View className='flex flex-row items-center justify-between'>
+                <View
+                    className={`flex size-9 items-center justify-center rounded-xl ${selected ? 'bg-primary' : 'bg-field'}`}
+                >
+                    <Icon className={selected ? 'text-white' : 'text-subtle'} />
+                </View>
+                {selected ? (
+                    <CircleCheck className='text-primary' />
+                ) : (
+                    <CircleDot className='text-subtle' />
+                )}
+            </View>
+            <Text className='font-jakarta-bold text-foreground'>{title}</Text>
+            <Text className='font-jakarta text-muted'>{desc}</Text>
+        </Pressable>
+    );
+}
+
 export default function RegisterScreen() {
     const [show, setShow] = useState(false);
+    const [role, setRole] = useState<Role>('owner');
 
     return (
         <SafeAreaView>
             {/* header */}
-            <View className='flex flex-row gap-x-4 px-5 py-5'>
+            <View className='flex flex-row items-center gap-x-4 px-5 py-5'>
                 <Pressable onPress={() => router.back()} hitSlop={8}>
-                    <View className='flex size-12 items-center justify-center rounded-2xl border border-outline'>
-                        <ArrowLeft className='text-foreground' />
-                    </View>
+                    <ArrowLeft className='size-6 text-foreground' />
                 </Pressable>
                 <View className='flex'>
                     <Text className='font-jakarta-bold text-lg text-foreground'>
@@ -79,41 +121,20 @@ export default function RegisterScreen() {
                 </Text>
 
                 <View className='mt-5 flex flex-row gap-x-3'>
-                    <View className='flex flex-1 gap-y-3 rounded-3xl border-2 border-primary bg-primary-soft px-4 py-4'>
-                        <View className='flex flex-row items-center justify-between'>
-                            <View className='flex size-9 items-center justify-center rounded-xl bg-primary'>
-                                <Building2 className='text-white' />
-                            </View>
-                            <View>
-                                <CircleCheck className='text-primary' />
-                            </View>
-                        </View>
-
-                        <Text className='font-jakarta-bold text-foreground'>
-                            Owner
-                        </Text>
-                        <Text className='font-jakarta text-muted'>
-                            Punya lahan & dana proyek
-                        </Text>
-                    </View>
-
-                    <View className='flex flex-1 gap-y-3 rounded-3xl border-2 border-outline px-4 py-4'>
-                        <View className='flex flex-row items-center justify-between'>
-                            <View className='flex size-9 items-center justify-center rounded-xl bg-field'>
-                                <HardHat className='text-subtle' />
-                            </View>
-                            <View>
-                                <CircleDot className='text-subtle' />
-                            </View>
-                        </View>
-
-                        <Text className='font-jakarta-bold text-foreground'>
-                            Mandor
-                        </Text>
-                        <Text className='font-jakarta text-muted'>
-                            Mengerjakan proyek owner
-                        </Text>
-                    </View>
+                    <RoleCard
+                        selected={role === 'owner'}
+                        onPress={() => setRole('owner')}
+                        icon={Building2}
+                        title='Owner'
+                        desc='Punya lahan & dana proyek'
+                    />
+                    <RoleCard
+                        selected={role === 'mandor'}
+                        onPress={() => setRole('mandor')}
+                        icon={HardHat}
+                        title='Mandor'
+                        desc='Mengerjakan proyek owner'
+                    />
                 </View>
 
                 {/* input form */}
