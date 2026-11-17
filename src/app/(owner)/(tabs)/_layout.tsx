@@ -5,7 +5,7 @@ import {
     MessageIcon,
 } from '@/components/navbar-icons';
 import { Tabs } from 'expo-router';
-import { PlatformPressable } from 'expo-router/build/react-navigation';
+import { PlatformPressable } from 'expo-router/react-navigation';
 
 export default function TabLayout() {
     return (

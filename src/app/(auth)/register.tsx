@@ -151,12 +151,12 @@ export default function RegisterScreen() {
                 </View>
 
                 {/* daftar sekarang */}
-                <Pressable
+                <Button
+                    value='Daftar Sekarang'
+                    icon={ArrowRight}
                     onPress={() => router.replace('/')}
                     className='mt-10'
-                >
-                    <Button value='Daftar Sekarang' icon={ArrowRight} />
-                </Pressable>
+                />
 
                 <View className='mt-7 flex flex-row justify-center gap-x-1'>
                     <Text className='font-jakarta text-sm text-muted'>

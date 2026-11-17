@@ -97,9 +97,12 @@ export default function LoginScreen() {
                 </View>
 
                 {/* masuk */}
-                <Pressable onPress={() => router.replace('/')} className='mt-4'>
-                    <Button value='Masuk' icon={ArrowRight} />
-                </Pressable>
+                <Button
+                    value='Masuk'
+                    icon={ArrowRight}
+                    onPress={() => router.replace('/')}
+                    className='mt-4'
+                />
 
                 <View className='mt-6 flex flex-row justify-center gap-x-1'>
                     <Text className='font-jakarta text-sm text-muted'>
